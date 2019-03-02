@@ -27,6 +27,21 @@ class App extends React.Component {
     }))
   };
 
+  handleAddPlayer = (name) => {
+    this.setState(prevState => {
+      //가장 큰 playerId를 구한다.
+      let maxId = 0;
+      this.state.players.forEach(item => item.id > maxId ? maxId = item.id : maxId = maxId);
+
+      return {
+        players: [
+          ...prevState.players,
+          {id: maxId + 1, name, score: 0} // name:name -> name 으로 해도됨
+        ]
+      }
+    });
+  };
+
   handleChangeSocore = (index, delta) => {
     console.log(index, delta);
     const players = this.state.players.map((player, idx) => {
@@ -56,7 +71,7 @@ class App extends React.Component {
             changeScore={this.handleChangeSocore} />)
         }
 
-        <AddPlayerForm/>
+        <AddPlayerForm addPlayer={this.handleAddPlayer}/>
       </div>
     )
   }
