@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Statistics = (props) => {
-  console.log(props);
+
   const totalPlayers = props.players.length;
 
   let totalScore = 0;
