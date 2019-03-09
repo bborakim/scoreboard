@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {Home} from "./Home";
 import {Scoreboard} from "./Scoreboard";
 import {Heroes} from "./Heroes";
+import {Menu} from "./Menu";
 
 // named export
 export class Root extends React.Component {
@@ -14,7 +15,7 @@ export class Root extends React.Component {
     return (
       <BrowserRouter>
         <>
-          <p>공통메뉴 영역</p>
+          <Menu></Menu>
           <Switch>
           <Route exact path="/" component={Home} ></Route>
           <Route path="/heroes" component={Heroes} > </Route>
