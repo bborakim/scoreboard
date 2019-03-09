@@ -1,0 +1,9 @@
+ul {
+  //ul 관련 css 영역
+
+  &.img-box { //부모 .img-box 영역
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import Header from "../../components/Header";
 import AddPlayerForm from "../../components/AddPlayerForm";
 import Player from "../../components/Player";
-import './Scordboard.css';
+import './Scordboard.module.css';
 
 class Scoreboard extends React.Component {
 
