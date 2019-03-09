@@ -31,11 +31,11 @@ let mapStateToProps = (state) => {
   }
 }
 
-// action을 dispatch하는 펑션을 Props로 매핑
+/*// action을 dispatch하는 펑션을 Props로 매핑
 let mapActionToProps = (dispatch) => {
   return {
     changeTitle: () => dispatch(updateTitle('test scoreboard'))
   }
-}
+}*/
 
 export default connect(mapStateToProps, {updateTitle})(Header);
